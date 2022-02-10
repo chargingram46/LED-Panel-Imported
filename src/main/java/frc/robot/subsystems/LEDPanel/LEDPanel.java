@@ -6,6 +6,7 @@ package frc.robot.subsystems.LEDPanel;
 
 import edu.wpi.first.wpilibj.AddressableLED;
 import edu.wpi.first.wpilibj.AddressableLEDBuffer;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.subsystems.LEDPanel.Letters.Phrases;
@@ -13,9 +14,10 @@ import frc.robot.subsystems.LEDPanel.Letters.Phrases;
 public class LEDPanel extends SubsystemBase {
   private AddressableLED m_led = null;
   private AddressableLEDBuffer m_ledBuffer = null;
-
+  private final int kLED_COLUMNS = 32;
+  private final int kLED_ROWS = 8;
   // number of LEDs
-  private final int m_noLEDs = 8 * 32;
+  private final int m_noLEDs = kLED_ROWS * kLED_COLUMNS;
 
   /** Creates a new LEDPanel. */
   public LEDPanel() {
@@ -35,38 +37,71 @@ public class LEDPanel extends SubsystemBase {
     m_led.setData(m_ledBuffer);
     m_led.start();
 
+    m_timer.start();
+
   }
 
   private int m_index = 0;
+  private Timer m_timer = new Timer();
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    m_ledBuffer.setRGB(m_index, 0, 0, 0);
 
-    m_index++;
-    if (m_index >= m_noLEDs) {
-      m_index = 0;
+    // only do this every x seconds
+    if (m_timer.advanceIfElapsed(0.1) == false) {
+      return;
     }
 
     // m_ledBuffer.setRGB(m_index, 255, 0, 0);
-    Phrases p = new Phrases("TEST");
+    String phraseVals[] = new String[4];
+    phraseVals[0] = "__THIS_IS_1ST_Phrase";
+    phraseVals[1] = "__THIS_IS_2ND_Phrase";
+    phraseVals[2] = "__THIS_IS_3RD_PHRASE";
+
+    Color pColors[] = new Color[4];
+    pColors[0] = Color.kRed;
+    pColors[1] = Color.kGreen;
+    pColors[2] = Color.kBlue;
+
+    // Phrases p = new Phrases("__THIS_IS_A_DIFFERENT_TEST");
+    // System.out.print("My is val is" + phraseVals[0].toUpperCase());
+
+    Phrases p = new Phrases(phraseVals[0].toUpperCase());
+    p.phraseColor = pColors[0];
+    // p.phraseColor = Color.kBlue;
     Color color[][] = p.getColors();
+
+    m_index++;
+    if (m_index >= p.size() * 7) {
+      m_index = 0;
+    }
 
     int col = 0;
     int row = 0;
     int i = 0;
 
-    // TODO fix 14 to be a calc
-    for (col = 0; col < p.size() * 7; col++) {
+    // Make sure that we don't write out more than the number of columns on the LED
+    // Panel
+    // Use the smaller of the number of columns in the phrase or the number of the
+    // columns left in the phrase
+    int columnsToUpdate = kLED_COLUMNS;
+    int columnsInPhrase = p.size() * 7;
+    if (columnsInPhrase - m_index < kLED_COLUMNS) {
+      columnsToUpdate = columnsInPhrase - m_index;
+    }
+
+    for (col = 0; col < columnsToUpdate; col++) {
       for (row = 0; row < 8; row++) {
         i = (row * 32) + col;
-        // System.out.println("i: " + i + " col: " + col + " row: " + row);
-        m_ledBuffer.setLED(i, color[col][row]);
+        // System.out.println("index: " + m_index + " i: " + i + " col: " + col + " row:
+        // " + row);
+        m_ledBuffer.setLED(i, color[col + m_index][row]);
       }
     }
 
     m_led.setData(m_ledBuffer);
+
   }
 
   public void print(Phrases phrase) {

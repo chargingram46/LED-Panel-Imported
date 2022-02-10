@@ -13,6 +13,8 @@ public class Phrases {
 
     List<LetterBase> phrase;
 
+    public Color phraseColor;
+
     public Phrases(String p) {
 
         phrase = LetterFactory.getLetterList(p);
@@ -53,7 +55,7 @@ public class Phrases {
             for (int col = 0; col < 6; col++) {
                 for (int row = 0; row < 6; row++) {
                     if (LEDs[row][col] == 1) {
-                        colors[col + (index * 7)][row] = Color.kRed;
+                        colors[col + (index * 7)][row] = phraseColor;
                     }
                 }
             }
