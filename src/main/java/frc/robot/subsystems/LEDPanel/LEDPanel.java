@@ -57,7 +57,7 @@ public class LEDPanel extends SubsystemBase {
     String phraseVals[] = new String[4];
     phraseVals[0] = "__THIS_IS_1ST_Phrase";
     phraseVals[1] = "__THIS_IS_2ND_Phrase";
-    phraseVals[2] = "__THIS_IS_3RD_PHRASE";
+    phraseVals[2] = "__0123456789";
 
     Color pColors[] = new Color[4];
     pColors[0] = Color.kRed;
@@ -67,7 +67,7 @@ public class LEDPanel extends SubsystemBase {
     // Phrases p = new Phrases("__THIS_IS_A_DIFFERENT_TEST");
     // System.out.print("My is val is" + phraseVals[0].toUpperCase());
 
-    Phrases p = new Phrases(phraseVals[0].toUpperCase());
+    Phrases p = new Phrases(phraseVals[2].toUpperCase());
     p.phraseColor = pColors[0];
     // p.phraseColor = Color.kBlue;
     Color color[][] = p.getColors();

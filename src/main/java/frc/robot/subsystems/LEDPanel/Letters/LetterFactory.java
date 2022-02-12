@@ -3,35 +3,36 @@
 // the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.subsystems.LEDPanel.Letters;
+
 import java.util.*;
 
 /** Add your docs here. */
 public class LetterFactory {
-    public static LetterBase[] getLetters(String phrase){
-      int length = phrase.length();
+    public static LetterBase[] getLetters(String phrase) {
+        int length = phrase.length();
         LetterBase[] letters = new LetterBase[length];
 
-        for (int c = 0; c < length; c++){
+        for (int c = 0; c < length; c++) {
             letters[c] = getLetter(phrase.charAt(c));
         }
-       
-        return letters;
-   }
-   
-   public static List<LetterBase> getLetterList(String phrase){
 
-        List<LetterBase> list=new ArrayList<LetterBase>();
-        
+        return letters;
+    }
+
+    public static List<LetterBase> getLetterList(String phrase) {
+
+        List<LetterBase> list = new ArrayList<LetterBase>();
+
         int length = phrase.length();
 
-        for (int c = 0; c < length; c++){
+        for (int c = 0; c < length; c++) {
             list.add(getLetter(phrase.charAt(c)));
         }
-       
+
         return list;
-   }
-   
-   public static LetterBase getLetter(char l){
+    }
+
+    public static LetterBase getLetter(char l) {
         switch (l) {
             case 'A':
                 return new LetterA();
@@ -91,11 +92,24 @@ public class LetterFactory {
                 return new Letter1();
             case '2':
                 return new Letter2();
-            case'3':
+            case '3':
                 return new Letter3();
+            case '4':
+                return new Letter4();
+            case '5':
+                return new Letter5();
+            case '6':
+                return new Letter6();
+            case '7':
+                return new Letter7();
+            case '8':
+                return new Letter8();
+            case '9':
+                return new Letter9();
+            case '0':
+                return new Letter0();
 
-                    }
+        }
         return null;
     }
 }
-
