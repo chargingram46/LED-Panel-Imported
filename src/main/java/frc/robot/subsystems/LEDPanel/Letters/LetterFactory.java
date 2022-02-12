@@ -108,6 +108,8 @@ public class LetterFactory {
                 return new Letter9();
             case '0':
                 return new Letter0();
+            case 'a':
+                return new SpecialA();
 
         }
         return null;
