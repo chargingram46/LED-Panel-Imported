@@ -118,6 +118,14 @@ public class LetterFactory {
                 return new SpecialB();
             case 'c':
                 return new SpecialC();
+            case '*':
+                return new Secret1();
+            case '?':
+                return new Special7();
+            case '<':
+                return new Alt1();
+            case '>':
+                return new Alt2();
 
         }
         return null;
