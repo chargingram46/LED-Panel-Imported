@@ -57,7 +57,7 @@ public class LEDPanel extends SubsystemBase {
     String phraseVals[] = new String[4];
     phraseVals[0] = "__THIS_IS_1ST_Phrase";
     phraseVals[1] = "__THIS_IS_2ND_Phrase";
-    phraseVals[2] = "__A_a_TEST.TEST!TEST";
+    phraseVals[2] = "__A_a_B_b_C_c_AaBbCc_TEST.TEST!TEST";
 
     Color pColors[] = new Color[4];
     pColors[0] = Color.kRed;

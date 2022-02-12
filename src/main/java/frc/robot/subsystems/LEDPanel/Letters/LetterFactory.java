@@ -114,6 +114,10 @@ public class LetterFactory {
                 return new Special_();
             case '!':
                 return new Special1();
+            case 'b':
+                return new SpecialB();
+            case 'c':
+                return new SpecialC();
 
         }
         return null;
