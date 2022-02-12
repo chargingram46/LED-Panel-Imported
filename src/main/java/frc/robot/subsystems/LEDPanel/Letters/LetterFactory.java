@@ -110,6 +110,10 @@ public class LetterFactory {
                 return new Letter0();
             case 'a':
                 return new SpecialA();
+            case '.':
+                return new Special_();
+            case '!':
+                return new Special1();
 
         }
         return null;
