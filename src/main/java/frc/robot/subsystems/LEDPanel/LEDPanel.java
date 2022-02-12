@@ -68,7 +68,7 @@ public class LEDPanel extends SubsystemBase {
     // System.out.print("My is val is" + phraseVals[0].toUpperCase());
 
     Phrases p = new Phrases(phraseVals[2].toUpperCase());
-    p.phraseColor = pColors[0];
+    p.phraseColor = pColors[2];
     // p.phraseColor = Color.kBlue;
     Color color[][] = p.getColors();
 
