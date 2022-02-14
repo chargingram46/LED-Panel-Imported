@@ -39,42 +39,72 @@ public class LEDPanel extends SubsystemBase {
 
     m_timer.start();
 
+    phraseVals[0] = "__FIRST_Phrase";
+    phraseVals[1] = "__SECOND_Phrase";
+    // phraseVals[2] = "__THIRD_PHRASE";
+    // phraseVals[3] = "__Fourth_Phrase";
+
+    pColors[0] = Color.kRed;
+    pColors[1] = Color.kGreen;
+    // pColors[2] = Color.kBlue;
+    // pColors[3] = Color.kOrange;
+
+    p = new Phrases(phraseVals[0].toUpperCase());
+    p.phraseColor = pColors[0];
+
   }
 
   private int m_index = 0;
+  private int phraseIndex = -1;
+  Phrases p = null;
   private Timer m_timer = new Timer();
+  String phraseVals[] = new String[2];
+  Color pColors[] = new Color[2];
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
 
     // only do this every x seconds
+    // if (m_timer.advanceIfElapsed(0.1) == false) {
+    // return;
+    // }
     if (m_timer.advanceIfElapsed(0.1) == false) {
       return;
     }
 
     // m_ledBuffer.setRGB(m_index, 255, 0, 0);
-    String phraseVals[] = new String[4];
-    phraseVals[0] = "__THIS_IS_1ST_Phrase";
-    phraseVals[1] = "__THIS_IS_2ND_Phrase";
-    phraseVals[2] = "__TEST.TEST>_TEST!TEST<_TEST?";
 
-    Color pColors[] = new Color[4];
-    pColors[0] = Color.kRed;
-    pColors[1] = Color.kGreen;
-    pColors[2] = Color.kBlue;
+    // System.out.println("Phrase Index = " + phraseIndex);
+
+    // String phraseVals[] = new String[4];
+    // phraseVals[0] = "__FIRST_Phrase";
+    // phraseVals[1] = "__SECOND_Phrase";
+    // phraseVals[2] = "__THIRD_PHRASE";
+
+    // Color pColors[] = new Color[4];
+    // pColors[0] = Color.kRed;
+    // pColors[1] = Color.kGreen;
+    // pColors[2] = Color.kBlue;
 
     // Phrases p = new Phrases("__THIS_IS_A_DIFFERENT_TEST");
     // System.out.print("My is val is" + phraseVals[0].toUpperCase());
 
-    Phrases p = new Phrases(phraseVals[2]);
-    p.phraseColor = pColors[0];
+    // Phrases p = new Phrases(phraseVals[phraseIndex].toUpperCase());
+    // p.phraseColor = pColors[phraseIndex];
     // p.phraseColor = Color.kBlue;
     Color color[][] = p.getColors();
 
     m_index++;
     if (m_index >= p.size() * 7) {
       m_index = 0;
+
+      phraseIndex++;
+      if (phraseIndex >= phraseVals.length) {
+        phraseIndex = 0;
+      }
+      p = new Phrases(phraseVals[phraseIndex].toUpperCase());
+      p.phraseColor = pColors[phraseIndex];
     }
 
     int col = 0;
@@ -101,6 +131,13 @@ public class LEDPanel extends SubsystemBase {
     }
 
     m_led.setData(m_ledBuffer);
+
+    // phraseIndex++;
+    // if (phraseIndex >= phraseVals.length) {
+    // phraseIndex = 0;
+    // }
+    // p = new Phrases(phraseVals[phraseIndex].toUpperCase());
+    // p.phraseColor = pColors[phraseIndex];
 
   }
 
