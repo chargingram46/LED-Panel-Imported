@@ -39,13 +39,15 @@ public class LEDPanel extends SubsystemBase {
 
     m_timer.start();
 
-    phraseVals[0] = "__FIRST_Phrase";
-    phraseVals[1] = "__SECOND_Phrase";
+    //  We are no strangers to love You know the rules and so do I A full commitments what I am thinking of You would not get this from any other guy I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it And if you ask me how I am feeling Do not tell me you are too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never gonna give We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye
+
+    phraseVals[0] = "  We are no strangers to love You know the rules and so do I A full commitments what I am thinking of You would not get this from any other guy I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it And if you ask me how I am feeling Do not tell me you are too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never gonna give We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye";
+    phraseVals[1] = "  ONE MORE TIME!";
     // phraseVals[2] = "__THIRD_PHRASE";
     // phraseVals[3] = "__Fourth_Phrase";
 
-    pColors[0] = Color.kRed;
-    pColors[1] = Color.kGreen;
+    pColors[0] = Color.kYellow;
+    pColors[1] = Color.kRed;
     // pColors[2] = Color.kBlue;
     // pColors[3] = Color.kOrange;
 
