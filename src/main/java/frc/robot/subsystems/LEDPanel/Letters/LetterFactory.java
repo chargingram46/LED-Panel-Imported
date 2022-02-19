@@ -54,7 +54,7 @@ public class LetterFactory {
                 return new LetterI();
             case 'J':
                 return new LetterJ();
-            case '_':
+            case ' ':
                 return new Letter_();
             case 'K':
                 return new LetterK();
@@ -126,6 +126,8 @@ public class LetterFactory {
                 return new Alt1();
             case '>':
                 return new Alt2();
+            case '+':
+                return new Secret2();
 
         }
         return null;
