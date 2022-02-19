@@ -10,6 +10,7 @@ import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.LEDPanel.LEDPanel;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.LEDStrip.LEDStrip;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -21,7 +22,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final LEDPanel m_LEDPanel = new LEDPanel();
+  // private final LEDPanel m_LEDPanel = new LEDPanel();
+  private final LEDStrip m_LEDStrip = new LEDStrip();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
