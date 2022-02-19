@@ -13,7 +13,7 @@
   "Window": {
     "###Addressable LEDs": {
       "Collapsed": "0",
-      "Pos": "311,76",
+      "Pos": "278,96",
       "Size": "255,923"
     },
     "###FMS": {
@@ -23,17 +23,17 @@
     },
     "###Joysticks": {
       "Collapsed": "0",
-      "Pos": "719,987",
+      "Pos": "479,1266",
       "Size": "1516,109"
     },
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "713,495",
+      "Pos": "596,45",
       "Size": "1500,370"
     },
     "###Other Devices": {
       "Collapsed": "0",
-      "Pos": "1801,40",
+      "Pos": "2167,42",
       "Size": "500,1495"
     },
     "###System Joysticks": {

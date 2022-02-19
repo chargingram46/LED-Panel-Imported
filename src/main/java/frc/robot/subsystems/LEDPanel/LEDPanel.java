@@ -39,17 +39,39 @@ public class LEDPanel extends SubsystemBase {
 
     m_timer.start();
 
-    //  We are no strangers to love You know the rules and so do I A full commitments what I am thinking of You would not get this from any other guy I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it And if you ask me how I am feeling Do not tell me you are too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never gonna give We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye
+    // We are no strangers to love You know the rules and so do I A full commitments
+    // what I am thinking of You would not get this from any other guy I just wanna
+    // tell you how I am feeling Gotta make you understand Never gonna give you up
+    // Never gonna let you down Never gonna run around and desert you Never gonna
+    // make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We
+    // have known each other for so long Your hearts been aching but you are too shy
+    // to say it Inside we both know what has been going on We know the game and we
+    // are gonna play it And if you ask me how I am feeling Do not tell me you are
+    // too blind to see Never gonna give you up Never gonna let you down Never gonna
+    // run around and desert you Never gonna make you cry Never gonna say goodbye
+    // Never gonna tell a lie and hurt you Never gonna give you up Never gonna let
+    // you down Never gonna run around and desert you Never gonna make you cry Never
+    // gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never
+    // gonna give We have known each other for so long Your hearts been aching but
+    // you are too shy to say it Inside we both know what has been going on We know
+    // the game and we are gonna play it I just wanna tell you how I am feeling
+    // Gotta make you understand Never gonna give you up Never gonna let you down
+    // Never gonna run around and desert you Never gonna make you cry Never gonna
+    // say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never
+    // gonna let you down Never gonna run around and desert you Never gonna make you
+    // cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna
+    // give you up Never gonna let you down Never gonna run around and desert you
+    // Never gonna make you cry Never gonna say goodbye
 
-    phraseVals[0] = "  We are no strangers to love You know the rules and so do I A full commitments what I am thinking of You would not get this from any other guy I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it And if you ask me how I am feeling Do not tell me you are too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never gonna give We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye";
+    phraseVals[0] = "  FIRST PHRASE";
     phraseVals[1] = "  ONE MORE TIME!";
-    // phraseVals[2] = "__THIRD_PHRASE";
-    // phraseVals[3] = "__Fourth_Phrase";
+    phraseVals[2] = "  THIRD PHRASE";
+    phraseVals[3] = "  Fourth Phrase";
 
     pColors[0] = Color.kYellow;
     pColors[1] = Color.kRed;
-    // pColors[2] = Color.kBlue;
-    // pColors[3] = Color.kOrange;
+    pColors[2] = Color.kBlue;
+    pColors[3] = Color.kOrange;
 
     p = new Phrases(phraseVals[0].toUpperCase());
     p.phraseColor = pColors[0];
@@ -57,11 +79,11 @@ public class LEDPanel extends SubsystemBase {
   }
 
   private int m_index = 0;
-  private int phraseIndex = -1;
+  private int phraseIndex = 0;
   Phrases p = null;
   private Timer m_timer = new Timer();
-  String phraseVals[] = new String[2];
-  Color pColors[] = new Color[2];
+  String phraseVals[] = new String[4];
+  Color pColors[] = new Color[4];
 
   @Override
   public void periodic() {
