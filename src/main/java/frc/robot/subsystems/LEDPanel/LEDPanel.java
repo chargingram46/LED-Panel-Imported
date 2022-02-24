@@ -147,10 +147,12 @@ public class LEDPanel extends SubsystemBase {
 
     for (col = 0; col < columnsToUpdate; col++) {
       for (row = 0; row < 8; row++) {
-        i = (row * 32) + col;
-        // System.out.println("index: " + m_index + " i: " + i + " col: " + col + " row:
-        // " + row);
-        m_ledBuffer.setLED(i, color[col + m_index][row]);
+        i = (col * 8) + row;
+        if (col % 2 == 0) {
+          m_ledBuffer.setLED(i, color[col + m_index][row]);
+        } else {
+          m_ledBuffer.setLED(i, color[col + m_index][7 - row]);
+        }
       }
     }
 
