@@ -63,7 +63,7 @@ public class LEDPanel extends SubsystemBase {
     // give you up Never gonna let you down Never gonna run around and desert you
     // Never gonna make you cry Never gonna say goodbye
 
-    phraseVals[0] = "  FIRST PHRASE";
+    phraseVals[0] = "  ABCD";
     phraseVals[1] = "  ONE MORE TIME!";
     phraseVals[2] = "  THIRD PHRASE";
     phraseVals[3] = "  Fourth Phrase";
