@@ -54,7 +54,7 @@ public class Phrases {
 
             for (int col = 0; col < 6; col++) {
                 for (int row = 0; row < 6; row++) {
-                    if (LEDs[col][row] == 1) {
+                    if (LEDs[row][col] == 1) {
                         colors[col + (index * 7)][row] = phraseColor;
                     }
                 }

@@ -2,7 +2,7 @@
   "MainWindow": {
     "GLOBAL": {
       "height": "1699",
-      "maximized": "0",
+      "maximized": "1",
       "style": "0",
       "userScale": "2",
       "width": "2736",
@@ -13,8 +13,8 @@
   "Window": {
     "###Addressable LEDs": {
       "Collapsed": "0",
-      "Pos": "312,62",
-      "Size": "255,923"
+      "Pos": "542,50",
+      "Size": "682,423"
     },
     "###FMS": {
       "Collapsed": "0",
@@ -28,12 +28,12 @@
     },
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "601,364",
+      "Pos": "494,758",
       "Size": "1500,365"
     },
     "###Other Devices": {
       "Collapsed": "0",
-      "Pos": "2186,34",
+      "Pos": "1801,34",
       "Size": "500,1495"
     },
     "###System Joysticks": {
