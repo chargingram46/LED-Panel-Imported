@@ -22,8 +22,8 @@ import frc.robot.subsystems.LEDStrip.LEDStrip;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final LEDPanel m_LEDPanel = new LEDPanel();
-  // private final LEDStrip m_LEDStrip = new LEDStrip();
+  // private final LEDPanel m_LEDPanel = new LEDPanel();
+  private final LEDStrip m_LEDStrip = new LEDStrip();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 

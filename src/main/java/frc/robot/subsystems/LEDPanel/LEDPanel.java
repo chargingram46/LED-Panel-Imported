@@ -63,16 +63,42 @@ public class LEDPanel extends SubsystemBase {
     // give you up Never gonna let you down Never gonna run around and desert you
     // Never gonna make you cry Never gonna say goodbye
 
-    phraseVals[0] = "   We are no strangers to love You know the rules and so do I A full commitments what I am thinking of You would not get this from any other guy I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it And if you ask me how I am feeling Do not tell me you are too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give never gonna give We have known each other for so long Your hearts been aching but you are too shy to say it Inside we both know what has been going on We know the game and we are gonna play it I just wanna tell you how I am feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye";
-    phraseVals[1] = "  ONE MORE TIME!";
-    phraseVals[2] = "  THIRD PHRASE";
-    phraseVals[3] = "  Fourth Phrase";
+    // NASA Battelle
+    // Intuitive Foundation
+    // P&G
+    // Lawson Products
+    // Watson Gravel
+    // Triple D Performance and Repair
+    // Cincinnati Radiator
+    // Butler Rural Community Connection
+    // JP Wood Studio LLC
+    // Schuler Family
+
+    phraseVals[0] = "  Thanks to Our Sponsers!";
+    phraseVals[1] = "  NASA Battelle";
+    phraseVals[2] = "  Watson Gravel";
+    phraseVals[3] = "  Intuitive Foundation";
+    phraseVals[4] = "  Cincinnati Radiator";
+    phraseVals[5] = "  Procter and Gamble";
+    phraseVals[6] = "  Lawson Products";
+    phraseVals[7] = "  Triple D Performance and Repair";
+    phraseVals[8] = "  Butler Rural Community Connection";
+    phraseVals[9] = "  JP Wood Studio LLC";
+    phraseVals[10] = "  Schuler Family";
+    phraseVals[11] = "  Ross Local Schools";
 
     pColors[0] = Color.kYellow;
-    pColors[1] = Color.kRed;
-    pColors[2] = Color.kBlue;
-    pColors[3] = Color.kOrange;
-
+    pColors[1] = Color.kBlue;
+    pColors[2] = Color.kWhite;
+    pColors[3] = Color.kBlue;
+    pColors[4] = Color.kRed;
+    pColors[5] = Color.kBlue;
+    pColors[6] = Color.kYellow;
+    pColors[7] = Color.kBlue;
+    pColors[8] = Color.kGreen;
+    pColors[9] = Color.kBrown;
+    pColors[10] = Color.kOrange;
+    pColors[11] = Color.kMaroon;
     p = new Phrases(phraseVals[0].toUpperCase());
     p.phraseColor = pColors[0];
 
@@ -82,8 +108,8 @@ public class LEDPanel extends SubsystemBase {
   private int phraseIndex = 0;
   Phrases p = null;
   private Timer m_timer = new Timer();
-  String phraseVals[] = new String[4];
-  Color pColors[] = new Color[4];
+  String phraseVals[] = new String[12];
+  Color pColors[] = new Color[12];
 
   @Override
   public void periodic() {
@@ -93,7 +119,7 @@ public class LEDPanel extends SubsystemBase {
     // if (m_timer.advanceIfElapsed(0.1) == false) {
     // return;
     // }
-    if (m_timer.advanceIfElapsed(0.02) == false) {
+    if (m_timer.advanceIfElapsed(0.1) == false) {
       return;
     }
 
