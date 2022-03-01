@@ -33,15 +33,20 @@ public class LEDStrip extends SubsystemBase {
         m_ledBuffer = new AddressableLEDBuffer(m_noLEDs);
         m_led.setLength(m_ledBuffer.getLength());
 
+        // Red: (255, 0, 0)
+        // White: (255, 255, 255)
+        // Green:(0, 128, 0)
+        // Yellow:(255, 255, 0)
+
         // Set the data
         // m_ledBuffer.setRGB(5, 255, 0, 0);
-        String currentColor = "red";
-        String newColor = "red";
+        String currentColor = "white";
+        String newColor = "white";
         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
             // Sets the specified LED to the RGB values for red
             if ((i % 2) == 0) {
-                if (newColor == "red") {
-                    m_ledBuffer.setRGB(i, 255, 0, 0);
+                if (newColor == "white") {
+                    m_ledBuffer.setRGB(i, 255, 255, 255);
                 } else {
                     m_ledBuffer.setRGB(i, 0, 255, 0);
                 }
