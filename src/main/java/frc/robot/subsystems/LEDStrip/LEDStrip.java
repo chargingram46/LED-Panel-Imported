@@ -37,18 +37,282 @@ public class LEDStrip extends SubsystemBase {
         // White: (255, 255, 255)
         // Green:(0, 128, 0)
         // Yellow:(255, 255, 0)
+        // Black: (0, 0, 0)
 
         // Set the data
         // m_ledBuffer.setRGB(5, 255, 0, 0);
         String currentColor = "white";
         String newColor = "white";
+        String otherColor = "green";
+
         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
             // Sets the specified LED to the RGB values for red
+
             if ((i % 2) == 0) {
                 if (newColor == "white") {
                     m_ledBuffer.setRGB(i, 255, 255, 255);
                 } else {
-                    m_ledBuffer.setRGB(i, 0, 255, 0);
+                    m_ledBuffer.setRGB(i, 0, 0, 0);
+                }
+            }
+
+        }
+
+        for (var o = 0; o < m_ledBuffer.getLength(); o++) {
+
+            if (o == 1) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 3) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 5) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 7) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 9) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 11) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 13) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 15) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 17) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 19) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 21) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 23) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 25) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 27) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 29) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            if (o == 31) {
+                if (otherColor == "red") {
+                    m_ledBuffer.setRGB(o, 255, 0, 0);
+                } else {
+                    if (otherColor == "yellow") {
+                        m_ledBuffer.setRGB(o, 255, 255, 0);
+                    } else {
+                        if (otherColor == "green") {
+                            m_ledBuffer.setRGB(o, 0, 128, 0);
+                        } else {
+                            m_ledBuffer.setRGB(o, 0, 0, 0);
+                        }
+                    }
                 }
             }
 
