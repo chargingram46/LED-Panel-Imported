@@ -86,7 +86,8 @@ public class LEDPanel extends SubsystemBase {
     phraseVals[9] = "  JP Wood Studio LLC";
     phraseVals[10] = "  Schuler Family";
     phraseVals[11] = "  Ross Local Schools";
-    phraseVals[12] = "  And Happy Birthday to Carrie!";
+    phraseVals[12] = "  Happy Birthday to Carrie!";
+    phraseVals[13] = "  And Happy Saint Patricks Day!";
 
     pColors[0] = Color.kYellow;
     pColors[1] = Color.kBlue;
@@ -101,6 +102,7 @@ public class LEDPanel extends SubsystemBase {
     pColors[10] = Color.kOrange;
     pColors[11] = Color.kMaroon;
     pColors[12] = Color.kPurple;
+    pColors[13] = Color.kGreen;
 
     p = new Phrases(phraseVals[0].toUpperCase());
     p.phraseColor = pColors[0];
@@ -111,8 +113,8 @@ public class LEDPanel extends SubsystemBase {
   private int phraseIndex = 0;
   Phrases p = null;
   private Timer m_timer = new Timer();
-  String phraseVals[] = new String[13];
-  Color pColors[] = new Color[13];
+  String phraseVals[] = new String[14];
+  Color pColors[] = new Color[14];
 
   @Override
   public void periodic() {
