@@ -17,7 +17,12 @@
       "/LiveWindow/ExampleSubsystem": "Subsystem",
       "/LiveWindow/LEDPanel": "Subsystem",
       "/LiveWindow/LEDStrip": "Subsystem",
-      "/LiveWindow/Ungrouped/Scheduler": "Scheduler"
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/SmartDashboard/Ball Found": "Command",
+      "/SmartDashboard/Ball Not Found": "Command",
+      "/SmartDashboard/Hub Found": "Command",
+      "/SmartDashboard/Hub Not Found": "Command",
+      "/SmartDashboard/Hub Targeted": "Command"
     }
   }
 }

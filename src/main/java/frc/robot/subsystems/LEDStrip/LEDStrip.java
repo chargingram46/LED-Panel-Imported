@@ -33,6 +33,10 @@ public class LEDStrip extends SubsystemBase {
         m_ledBuffer = new AddressableLEDBuffer(m_noLEDs);
         m_led.setLength(m_ledBuffer.getLength());
 
+    }
+
+    public void setBallWhite() {
+
         // Red: (255, 0, 0) - 1
         // White: (255, 255, 255) - 1
         // Green:(0, 128, 0) - 3
@@ -44,289 +48,358 @@ public class LEDStrip extends SubsystemBase {
 
         // Set the data
         // m_ledBuffer.setRGB(5, 255, 0, 0);
-        String currentColor = "white";
-        String ballDetection = "white";
+
+        // String ballDetection = "white";
         String hubDetection = "red";
 
         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
             // Sets the specified LED to the RGB values for red
 
             if ((i % 2) == 0) {
-                if (ballDetection == "white") {
-                    m_ledBuffer.setRGB(i, 255, 255, 255);
-                } else {
-                    m_ledBuffer.setRGB(i, 0, 0, 0);
-                }
+
+                m_ledBuffer.setRGB(i, 255, 255, 255);
+
+            } else {
+
             }
 
         }
 
-        for (var o = 0; o < m_ledBuffer.getLength(); o++) {
-
-            if (o == 1) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 3) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 5) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 7) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 9) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 11) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 13) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 15) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 17) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 19) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 21) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 23) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 25) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 27) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 29) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-            if (o == 31) {
-                if (hubDetection == "red") {
-                    m_ledBuffer.setRGB(o, 255, 0, 0);
-                } else {
-                    if (hubDetection == "yellow") {
-                        m_ledBuffer.setRGB(o, 255, 255, 0);
-                    } else {
-                        if (hubDetection == "green") {
-                            m_ledBuffer.setRGB(o, 0, 128, 0);
-                        } else {
-                            m_ledBuffer.setRGB(o, 0, 0, 0);
-                        }
-                    }
-                }
-            }
-
-        }
+        /*
+         * for (var o = 0; o < m_ledBuffer.getLength(); o++) {
+         * 
+         * if (o == 1) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 3) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 5) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 7) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 9) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 11) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 13) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 15) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 17) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 19) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 21) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 23) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 25) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 27) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 29) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * if (o == 31) {
+         * if (hubDetection == "red") {
+         * m_ledBuffer.setRGB(o, 255, 0, 0);
+         * } else {
+         * if (hubDetection == "yellow") {
+         * m_ledBuffer.setRGB(o, 255, 255, 0);
+         * } else {
+         * if (hubDetection == "green") {
+         * m_ledBuffer.setRGB(o, 0, 128, 0);
+         * } else {
+         * m_ledBuffer.setRGB(o, 0, 0, 0);
+         * }
+         * }
+         * }
+         * }
+         * 
+         * }
+         */
         m_led.setData(m_ledBuffer);
         m_led.start();
 
         // m_timer.start();
+
     }
 
-    public void setBallWhite() {
+    public void setBallBlack() {
+        for (var a = 0; a < m_ledBuffer.getLength(); a++) {
+            // Sets the specified LED to the RGB values for red
+
+            if ((a % 2) == 0) {
+
+                m_ledBuffer.setRGB(a, 0, 0, 0);
+
+            } else {
+
+            }
+
+        }
+
+        m_led.setData(m_ledBuffer);
+        m_led.start();
+
+    }
+
+    public void setHubRed() {
+        for (var a = 0; a < m_ledBuffer.getLength(); a++) {
+            // Sets the specified LED to the RGB values for red
+
+            if ((a % 2) == 0) {
+
+            } else { // odd leds
+                m_ledBuffer.setRGB(a, 255, 0, 0);
+            }
+
+        }
+
+        m_led.setData(m_ledBuffer);
+        m_led.start();
+
+    }
+
+    public void setHubYellow() {
+        for (var a = 0; a < m_ledBuffer.getLength(); a++) {
+            // Sets the specified LED to the RGB values for red
+
+            if ((a % 2) == 0) {
+
+            } else { // odd leds
+                m_ledBuffer.setRGB(a, 255, 255, 0);
+            }
+
+        }
+
+        m_led.setData(m_ledBuffer);
+        m_led.start();
+
+    }
+
+    public void setHubGreen() {
+        for (var a = 0; a < m_ledBuffer.getLength(); a++) {
+            // Sets the specified LED to the RGB values for red
+
+            if ((a % 2) == 0) {
+
+            } else { // odd leds
+                m_ledBuffer.setRGB(a, 0, 128, 0);
+            }
+
+        }
+
+        m_led.setData(m_ledBuffer);
+        m_led.start();
 
     }
 
