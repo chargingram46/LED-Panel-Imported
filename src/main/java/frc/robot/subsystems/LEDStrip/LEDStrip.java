@@ -46,7 +46,7 @@ public class LEDStrip extends SubsystemBase {
         // m_ledBuffer.setRGB(5, 255, 0, 0);
         String currentColor = "white";
         String ballDetection = "white";
-        String hubDetection = "yellow";
+        String hubDetection = "red";
 
         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
             // Sets the specified LED to the RGB values for red
@@ -324,6 +324,10 @@ public class LEDStrip extends SubsystemBase {
         m_led.start();
 
         // m_timer.start();
+    }
+
+    public void setBallWhite() {
+
     }
 
 }
