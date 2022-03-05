@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.AddressableLEDBuffer;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.subsystems.LEDPanel.Letters.Phrases;
+import frc.robot.subsystems.LEDStrip.Input;
 
 public class LEDStrip extends SubsystemBase {
     private AddressableLED m_led = null;
@@ -33,23 +33,26 @@ public class LEDStrip extends SubsystemBase {
         m_ledBuffer = new AddressableLEDBuffer(m_noLEDs);
         m_led.setLength(m_ledBuffer.getLength());
 
-        // Red: (255, 0, 0)
-        // White: (255, 255, 255)
-        // Green:(0, 128, 0)
-        // Yellow:(255, 255, 0)
-        // Black: (0, 0, 0)
+        // Red: (255, 0, 0) - 1
+        // White: (255, 255, 255) - 1
+        // Green:(0, 128, 0) - 3
+        // Yellow:(255, 255, 0) -2
+        // Black: (0, 0, 0) - 0
+
+        // ballDetection(off, white)
+        // hubDetection(off, red, yellow, green)
 
         // Set the data
         // m_ledBuffer.setRGB(5, 255, 0, 0);
         String currentColor = "white";
-        String newColor = "white";
-        String otherColor = "green";
+        String ballDetection = "white";
+        String hubDetection = "yellow";
 
         for (var i = 0; i < m_ledBuffer.getLength(); i++) {
             // Sets the specified LED to the RGB values for red
 
             if ((i % 2) == 0) {
-                if (newColor == "white") {
+                if (ballDetection == "white") {
                     m_ledBuffer.setRGB(i, 255, 255, 255);
                 } else {
                     m_ledBuffer.setRGB(i, 0, 0, 0);
@@ -61,13 +64,13 @@ public class LEDStrip extends SubsystemBase {
         for (var o = 0; o < m_ledBuffer.getLength(); o++) {
 
             if (o == 1) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -77,13 +80,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 3) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -93,13 +96,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 5) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -109,13 +112,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 7) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -125,13 +128,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 9) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -141,13 +144,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 11) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -157,13 +160,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 13) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -173,13 +176,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 15) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -189,13 +192,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 17) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -205,13 +208,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 19) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -221,13 +224,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 21) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -237,13 +240,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 23) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -253,13 +256,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 25) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -269,13 +272,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 27) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -285,13 +288,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 29) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
@@ -301,13 +304,13 @@ public class LEDStrip extends SubsystemBase {
             }
 
             if (o == 31) {
-                if (otherColor == "red") {
+                if (hubDetection == "red") {
                     m_ledBuffer.setRGB(o, 255, 0, 0);
                 } else {
-                    if (otherColor == "yellow") {
+                    if (hubDetection == "yellow") {
                         m_ledBuffer.setRGB(o, 255, 255, 0);
                     } else {
-                        if (otherColor == "green") {
+                        if (hubDetection == "green") {
                             m_ledBuffer.setRGB(o, 0, 128, 0);
                         } else {
                             m_ledBuffer.setRGB(o, 0, 0, 0);
