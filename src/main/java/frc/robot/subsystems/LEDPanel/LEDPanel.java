@@ -6,6 +6,7 @@ package frc.robot.subsystems.LEDPanel;
 
 import edu.wpi.first.wpilibj.AddressableLED;
 import edu.wpi.first.wpilibj.AddressableLEDBuffer;
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -18,6 +19,8 @@ public class LEDPanel extends SubsystemBase {
   private final int kLED_ROWS = 8;
   // number of LEDs
   private final int m_noLEDs = kLED_ROWS * kLED_COLUMNS;
+
+  public AnalogInput m_Sensor = new AnalogInput(0);
 
   /** Creates a new LEDPanel. */
   public LEDPanel() {
